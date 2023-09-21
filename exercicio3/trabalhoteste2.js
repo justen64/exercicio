@@ -1,7 +1,7 @@
 function trabalhoteste2() {
-
+    
     alert("Bem-vindo ao cinesenai");
-
+    
     let escolha = 0;
     let listaCadastro = [
         ['admin', 'adminsenha'],
@@ -17,78 +17,6 @@ function trabalhoteste2() {
     ]
     let listaFilme;
     
-    function listaFilmes() {
-        alert("Filmes disponiveis");
-        while (escolha != 4) {
-            escolha = parseInt(prompt("1-Harry Potter\n2-A voz do silencio\n3-ABC"));
-    
-    
-            switch (escolha) {
-                case 1:
-                    assentosSala = [
-                        [true, true, true, true, true],
-                        [true, true, true, true, true],
-                        [true, true, true, true, true],
-                        [true, true, true, true, true],
-                        [true, true, true, true, true],
-                    ]
-                    
-                    function mapa(){
-                        resposta = (`   [===  TELA  ===]\n`)
-                        
-                        for (i=0 ;i<5;i++){
-                            resposta += i + "- "
-                            for (j=0 ;j<5;j++){
-                                let fileira = assentosSala[i]
-                                if(fileira[j] == true) {
-                                    resposta += "[  ] ";
-                                } else {
-                                    resposta += "[X] ";
-                                }
-                                //else
-                                // resposta += "[ X ] ";
-                            }
-                            resposta += "\n";
-                        }
-                        resposta += "     0    1   2   3   4";
-                        let fileira = prompt("Escolha uma fileira\n\n" + resposta);
-                        let coluna = prompt("Escolha uma coluna\n\n" + resposta);
-                    
-                        assentosSala[fileira][coluna] = false;
-                    
-                        mapa();
-                    }
-                    mapa();
-    
-                    break;
-                case 2:
-                    assentosSala = [
-                        [ , , , ,]
-                        [ , , , ,]
-                        [ , , , ,]
-                        [ , , , ,]
-                        [ , , , ,]
-
-
-
-
-
-                    ]
-                            break;
-    
-                        }
-                    }
-                    if (!logado) {
-                        alert("Login ou senha errado");
-                    }
-                    if (logado) {
-                        listaFilmes();
-                    }
-                    break;
-                case 3:
-            }
-        }
-    }
     function menuLogin(){
         while (escolha != 4) {
             escolha = parseInt(prompt("1-Cadastra-se\n2-Login\n3-Sair"));
@@ -131,50 +59,84 @@ function trabalhoteste2() {
             }
     }
     }
-
     menuLogin();
+
 }
-trabalhoteste2();
-
-assentosSala = [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-]
-
-function mapa(){
-    resposta = (`   [===  TELA  ===]\n`)
     
-    for (i=0 ;i<5;i++){
-        resposta += i + "- "
-        for (j=0 ;j<5;j++){
-            let fileira = assentosSala[i]
-            if(fileira[j] == true) {
-                resposta += "[  ] ";
-            } else {
-                resposta += "[X] ";
+function mapa(){
+        resposta = (`   [===  TELA  ===]\n`)
+        
+        for (i=0 ;i<5;i++){
+            resposta += i + "- "
+            for (j=0 ;j<5;j++){
+                let fileira = assentosSala[i]
+                if(fileira[j] == true) {
+                    resposta += "[  ] ";
+                } else {
+                    resposta += "[X] ";
+                }
+                //else
+                // resposta += "[ X ] ";
             }
-            //else
-            // resposta += "[ X ] ";
+            resposta += "\n";
         }
-        resposta += "\n";
+        resposta += "     0    1   2   3   4";
+        let fileira = prompt("Escolha uma fileira\n\n" + resposta);
+        let coluna = prompt("Escolha uma coluna\n\n" + resposta);
+    
+        assentosSala[fileira][coluna] = false;
+    
+        //mapa();
     }
-    resposta += "     0    1   2   3   4";
-    let fileira = prompt("Escolha uma fileira\n\n" + resposta);
-    let coluna = prompt("Escolha uma coluna\n\n" + resposta);
-
-    assentosSala[fileira][coluna] = false;
-
-    mapa();
-}
-mapa();
-
-//     [====  TELA  ====]
-// 1- [ ] [ ] [ ] [ ] [ ]
-// 2- [ ] [ ] [ ] [ ] [ ]
-// 3- [ ] [ ] [ ] [ ] [ ]
-// 4- [ ] [ ] [ ] [ ] [ ]
-// 5- [ ] [ ] [ ] [ ] [ ]
-//     A   B   C   D   E
+    function listaFilmes() {
+        alert("Filmes disponiveis");
+        while (escolha != 4) {
+            escolha = parseInt(prompt("1-Harry Potter\n2-A voz do silencio\n3-ABC \n4-Sair"));
+            
+            
+            switch (escolha) {
+                case 1:
+                    assentosSala = [
+                        [true, true, true, true, true],
+                        [true, true, true, true, true],
+                        [true, true, true, true, true],
+                        [true, true, true, true, true],
+                        [true, true, true, true, true],
+                    ]                   
+                    mapa();                   
+                    break;
+                    case 2:
+                        assentosSala = [
+                        [true,true,true,true],
+                        [true,true,true,true],
+                        [true,true,true,true],
+                        [true,true,true,true],
+                        [true,true,true,true],
+                    ]
+                    mapa();
+                    break;
+                    case 3:                       
+                        assentosSala = [
+                            [true, true, true, true, true],
+                            [true, true, true, true, true],
+                            [true, true, true, true, true],
+                            [true, true, true, true, true],
+                            [true, true, true, true, true],
+                        ]
+                        
+                        break;
+                        mapa();
+                    }
+                }   
+            }        
+                 
+           
+        
+trabalhoteste2();
+        
+        // 1- [ ] [ ] [ ] [ ] [ ]
+        // 2- [ ] [ ] [ ] [ ] [ ]
+            // 3- [ ] [ ] [ ] [ ] [ ]
+            // 4- [ ] [ ] [ ] [ ] [ ]
+            // 5- [ ] [ ] [ ] [ ] [ ]
+            //     A   B   C   D  E
