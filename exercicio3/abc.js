@@ -2,7 +2,13 @@ function abc() {
     
     alert("Bem-vindo ao cinesenai");
     
+    let ingressoFilme1;
+    let ingressoFilme2;
+    let ingressoFilme3;
+    let valorIngresso = 20
     let escolha = 0;
+    let listaDefilmes = ["Harry Potter" , "A voz do silencio" , "Gente grande"]
+    let adm = false;
     let listaCadastro = [
         ['admin', 'adminsenha'],
         ['cadastro', 'cadastrosenha'],
@@ -37,26 +43,34 @@ function abc() {
             
             switch (escolha) {
                 case 1:
-                    let cadastro = prompt("Qual seu email?");
+                    let cadastro = prompt("Cria um usuário");
                     let cadastrosenha = prompt("Crie uma senha");
+                    let senhaConfirmar = prompt("Confirme a senha");
                     
                     for (let i = 0; i < listaCadastro.length; i++) {
                         if (cadastro == listaCadastro[i][0]) {
                             alert("Você já está cadastrado");
                         }
                     }
+                    if (cadastrosenha == senhaConfirmar)
+                    alert
                     listaCadastro.push([cadastro, cadastrosenha])
                     alert("Bem-vindo ao cinesenai");
                     
                     break;
                     case 2:
-                        let login = prompt("Qual seu email?");
-                        let senha = prompt("Crie uma senha");
+                        let login = prompt("Digite seu usuário");
+                        let senha = prompt("Digite sua senha");
                         let logado = false
                         for (let i = 0; i < listaCadastro.length; i++) {
                             if (login == listaCadastro[i][0] && senha == listaCadastro[i][1]) {
-                                alert("Você entrou, para bens");
-                                logado = true;
+                                alert("Bem-vindo ao CineSenai");
+                                if (login == "admin" && senha == "adminsenha"){
+                                    alert("Login Administrativo!")
+                                    adm = true
+                                    logado = true
+                                }
+                                
                                 break;
                                 
                             }
@@ -64,12 +78,14 @@ function abc() {
                         if (!logado) {
                             alert("Login ou senha errado");
                     }
-                    if (logado) {
+                   else if (logado && adm == false) {
                         listaFilmes();
+                    } else if (logado && adm){
+                        menuadm();
                     }
                     break;
                     case 3:
-                        alert("Ate breve")
+                        alert("Até breve")
                         default:
                             alert("Opção inválida")
                         }
@@ -78,24 +94,27 @@ function abc() {
     function listaFilmes() {
                     alert("Filmes disponiveis");
                     while (escolha != 4) {
-                        escolha = parseInt(prompt("1-Harry Potter\n2-A voz do silencio\n3-ABC"));              
+                        escolha = parseInt(prompt("1-" + listaDefilmes[0]+ "\n2-"+listaDefilmes[1]+"\n3-"+listaDefilmes[2]));              
                         switch (escolha) {
                             case 1:
-                                mapa(filme1);    
+                                mapa(filme1); 
+                                ingressoFilme1 = ingressoFilme1 + 1   
                                 break;
                             case 2:
                                 mapa(filme2);
+                                ingressoFilme2 ++ 
                                 break;          
                             case 3:             
                                 mapa(filme3);
+                                ingressoFilme3 ++
                                 break;
                             }
                             tipo_ingresso = prompt("Meia ou Inteira")
                             tipo_ingresso = tipo_ingresso.toLowerCase()
                             if(tipo_ingresso == 'meia'){
-                                alert("Você paga metade, R$ 10,00")
+                                alert( `Você paga metade, R$${valorIngresso/2}`)
                             } else {
-                                alert("Preço integral R$ 20,00")
+                                alert(`Preço integral R$ ${valorIngresso}`)
                             }
                             
                             
@@ -139,7 +158,26 @@ function abc() {
         }
         alert(resposta)
     }
-    //menuLogin();
-    listaFilmes();
+    function menuadm(){
+        let faturamento = parseInt (prompt = ("1-Quais filmes faturaram mais?\n2- Qual faturamento total?\n3- Sair"));
+        switch (faturamento){
+            case 1:
+                alert ("1-" + listaDefilmes[0]+"R$" + ingressoFilme1*valorIngresso + "\n2-" + listaDefilmes[1] +
+                "R$" +ingressoFilme2*valorIngresso + "\n3-" + listaDefilmes[2] + "R$" + ingressoFilme3*valorIngresso)
+                break;
+            case 2:
+                let total = (ingressoFilme1 + ingressoFilme2 + ingressoFilme3)*valorIngresso
+                alert (total)
+                break;
+            default: 
+                alert ("Opção Inválida")
+                break;
+
+        } 
+        
+
+    }
+    menuLogin();
+    
     }
 abc();
