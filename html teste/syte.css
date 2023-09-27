@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+body {
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: #3F403F;
+}
+.cabecalho {
+    background-color: #9FB8AD;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.cabecalho_titulo {
+    color: #3F403F;
+    font-family: 'Open Sans', sans-serif;
+}
+.cabecalho_opcoes{
+    display: flex;
+}
+.cabecalho_opcoes li{
+    margin: 0px 10px;
+}
+nav li{
+    color: #3F403F;
+    font-size: medium;
+}
+#conteudo{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.foto_perfil{
+    width: 120px;
+}
+.footer{
+
+}

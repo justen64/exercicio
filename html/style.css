@@ -1,13 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 body {
+    width: 100vw;
+    box-sizing: border-box;
     background-color: #4597ab;
 
 }
-header {
-    width: 100%;
+.cabecalho {
+    /* width: 100%; */
     background-color: #203c44;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
 }
-header h1{
+.cabecalho_titulo{
 color: #d3dde0;
+font-family: 'Open Sans', sans-serif;
+
+
+
+}
+.cabecalho_lista_links{
+    display: flex;
+    margin: 0px 10px;
+
+}
+
+.foto_banda{
+    width: 75%;
+    height: 75%;
+    
+
+
+}
+.logo_spotify{
+    width: 25%;
+    height: 25%;
+    
+}
+ 
+#conteudo{
+    color: #d3dde0;
+    width: 50%;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
 
 
 }
