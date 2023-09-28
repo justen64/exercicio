@@ -11,38 +11,58 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    
 }
 .cabecalho_titulo{
 color: #d3dde0;
 font-family: 'Open Sans', sans-serif;
+position: relative;
+left: 10px;
+font-size: 50px;
 
 
 
 }
 .cabecalho_lista_links{
     display: flex;
-    margin: 0px 10px;
+    flex-direction: column;
+    margin: 100px 50px;
+    position: relative;
+    left: 1350px;
+    top: -450px;
+    font-size: 25px;
 
 }
+.cabecalho_lista_links li{
+    margin: 50px 0px;
+}
 
-.foto_banda{
-    width: 75%;
-    height: 75%;
-    
-
+.fotos_conteudo img{
+    width: 30%;
+    height: 55%;
+    position: absolute;
+    left: 750px;
+    top: 250px;
 
 }
-.logo_spotify{
-    width: 25%;
-    height: 25%;
+.fotos_conteudo_dois img{
+    height: 20%;
+    position: absolute;
+    left: 950px;
+    top: 750px;
     
 }
  
 #conteudo{
     color: #d3dde0;
-    width: 50%;
-    justify-content: center;
     font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    width: 25%;
 
-
+}
+.texto{
+    position: relative;
+    left: 150px;
+    top: 150px;
+    font-size: 20px;
 }
