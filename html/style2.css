@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+body {
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: #505964;
+}
+.cabecalho{
+    padding: 30px;
+    font-size: 50px;
+}
+.cabecalho_titulo{
+color: #d3dde0;
+font-family: 'Open Sans', sans-serif;
+display: flex;
+justify-content: center;
+
+}
+.lista_um{
+    display: flex;
+}
