@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.background{
+    width: 100vw;
+    background-image: url('Background.jpg');
+    background-size: cover;
+    height: 923px;
+    display: flex;
+    flex-direction: column;
+}
+.texto{
+    color: #d3dde0;
+    justify-content: left;
+    margin-top: 100px;
+    margin-left: 150px;
+    font-family: 'Anton', sans-serif;
+}
+.texto_2{
+    color: #d3dde0;
+    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.cx_amarela{
+    background-color: #F9EF23;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 60px auto;
+    align-items: center;
+}
+.texto_3{
+    color: #141414;
+    font-family: 'Hanken Grotesk', sans-serif;
+    /* font-size:  */
+}
+.resto{
+    background-color: #141414;
+    color: #d3dde0;
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.sobre_a_empresa{
+    color: #F9EF23;
+    font-size: 50px;
+    font-family: 'Anton', sans-serif;
+    justify-content: left;
+
+}
+
