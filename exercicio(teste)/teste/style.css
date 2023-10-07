@@ -22,6 +22,7 @@
     font-size: 100px;
     margin: 0 auto;
     margin-top: 200px;
+    font-style: italic;
 }
 .cx_amarela{
     background-color: #F9EF23;
@@ -37,36 +38,77 @@
     font-family: 'Hanken Grotesk', sans-serif;
     /* font-size:  */
 }
-.resto{
-    background-color: #141414;
-    color: #d3dde0;
-    display: flex;
-    height: 700px;
-    justify-content: space-between;
-    flex-direction: column;
-
-}
 .sobre_a_empresa{
     color: #F9EF23;
     font-size: 50px;
     font-family: 'Anton', sans-serif;
     justify-content: left;
     flex-direction: column;
-
+    text-align: left;
+    margin-left: 80px;
+    font-style: italic;
+    margin-top: 50px;
+    
+    
 }
 .texto_4{
     text-align: center;
-    width: 25%;
+    width: 35%;
     margin-top: 50px;
     margin-left: 80px;
+    font-family: 'Anton' , sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+}
+.resto{
+    background-color: #141414;
+    color: #d3dde0;
+    display: flex;
+    height: 580px;
+}
+.caixa_foto{
+display: flex;
+gap: 50px;
+margin-right: 700px;
 }
 .foto_esporte{
-    margin-top: -100px;
-    margin-left: 750px;
+    width: 180px;
+    height: 280px;
     object-fit: cover;
-    object-position: 75px 5px;
+    object-position: 8px;
+    
 }
 .foto_esporte1{
-    margin-top: -100px;
-    margin-left: 1150px;
+    width: 180px;
+    height: 280px;
+    object-fit: cover;
+    object-position: 60%;
+    margin-top: 50px;
+}
+.saiba_mais{
+    text-align: center;
+    width: 25%;
+    margin-top: 25px;
+    margin-left: 125px;
+    font-family: 'Anton' , sans-serif;
+
+}
+footer{
+    background-color: #F9EF23;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+footer h1{
+    font-family: 'Anton' , sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    color: #141414;
+}
+footer p{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 15px;
 }
